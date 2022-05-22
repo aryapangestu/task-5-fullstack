@@ -10,7 +10,7 @@ email: test@example.com
 1. Clone the github repo:
 
     ```bash
-    https://github.com/aryapangestu/task-5-fullstack.git
+    git clone https://github.com/aryapangestu/task-5-fullstack.git
     ```
 2. Go the project directory:
 
