@@ -14,9 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('users.index', [
-            "title" => "Users",
-            "users" => Category::all()
+        return view('categories.index', [
+            "title" => "Categories",
+            "categories" => Category::all(),
         ]);
     }
 }
