@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\User;
 
 class UserController extends Controller
@@ -14,9 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('categories.index', [
-            "title" => "Categories",
-            "categories" => Category::all(),
+        return view('users.index', [
+            "title" => "Users",
+            "users" => User::all()
         ]);
     }
 }

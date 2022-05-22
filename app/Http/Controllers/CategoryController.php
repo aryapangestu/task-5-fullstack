@@ -19,6 +19,7 @@ class CategoryController extends Controller
         return view('categories.index', [
             "title" => "Categories",
             "categories" => Category::all(),
+            "users" => User::all()
         ]);
     }
 
