@@ -63,7 +63,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "post-install-cmd": [
-        "php artisan clear-compiled",
+        "@php artisan clear-compiled",
+        "@php artisan cache:clear",
+        "@php artisan config:clear",
+        "@php artisan optimize",
+        "@php artisan migrate --force",
         "chmod -R 777 public/"
     ]
 }
