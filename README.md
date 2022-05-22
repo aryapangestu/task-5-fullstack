@@ -30,7 +30,7 @@ email: test@example.com
     ```bash
     copy .env.example .env
     ```
-5. Run XAMPP and create an empty Database named wtb_travel
+5. Run XAMPP and create an empty Database named task-5-fullstack
 6. Create tables into database using Laravel migration and seeder:
     ```bash
     php artisan migrate:fresh --seed
