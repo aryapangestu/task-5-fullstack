@@ -46,6 +46,9 @@
             "chmod -R 777 storage",
             "@php artisan passport:keys"
         ],
+        "test": [
+            "phpunit test"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
