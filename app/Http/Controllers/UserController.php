@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\User;
 
 class UserController extends Controller
@@ -15,7 +16,7 @@ class UserController extends Controller
     {
         return view('users.index', [
             "title" => "Users",
-            "users" => User::all()
+            "users" => Category::all()
         ]);
     }
 }
