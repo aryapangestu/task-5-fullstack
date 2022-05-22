@@ -1,9 +1,9 @@
 ## Demo
 You can immediately try this task-5-fullstack project:
-https://task-5-fullstack.herokuapp.com/
+</br>https://task-5-fullstack.herokuapp.com/
 
 email: test@example.com
-password: password
+</br>password: password
 
 ## Local installation
 
