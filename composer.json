@@ -43,7 +43,6 @@
             "@php artisan optimize",
             "@php artisan migrate --force",
             "chmod -R 777 public/",
-            "chmod -R 777 app/",
             "chmod -R 777 storage",
             "@php artisan passport:keys"
         ],
