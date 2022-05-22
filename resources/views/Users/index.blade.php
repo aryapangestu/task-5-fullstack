@@ -2,11 +2,11 @@
 
 @section('konten')
     <div class="pagetitle">
-        <h1>Users</h1>
+        <h1>Categories</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item">Users</li>
+                <li class="breadcrumb-item">Categories</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -25,8 +25,10 @@
                         @endif
 
                         <div class="alert alert-success" id="alertStatusPlace" style="display:none;">
-                            User status updated successfully!
+                            Category status updated successfully!
                         </div>
+
+                        <a type="button" class="btn btn-primary mb-3" href="/categories/create">Add new category</a>
 
                         <!-- Table with stripped rows -->
                         <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -53,15 +55,31 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                @foreach ($categories as $category)
                                     <tr>
-                                        <th scope="row">{{ $user->id }}</th>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
+                                        <th scope="row">{{ $category->id }}</th>
+                                        <td>{{ $category->name }}</td>
+                                        <td>{{ $category->user->name }}</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="/categories/{{ $category->id }}/edit" class="btn btn-warning"
+                                                    style="margin-right:2px">Edit</a>
+                                                <form action="/categories/{{ $category->id }}" method="post">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger"
+                                                        onclick="return confirm('Are you sure you want to delete this place?')"
+                                                        style="margin-top: 2px">
+                                                        Delete
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
