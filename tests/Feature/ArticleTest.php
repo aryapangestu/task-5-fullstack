@@ -13,6 +13,7 @@ use Tests\TestCase;
 
 class ArticleTest extends TestCase
 {
+    // migrate database
     use RefreshDatabase;
 
     public function setUp(): void
@@ -22,6 +23,7 @@ class ArticleTest extends TestCase
         // seed the database
         $this->artisan('db:seed');
 
+        // login
         $this->post('/login', [
             'email' => 'test@example.com',
             'password' => 'password',

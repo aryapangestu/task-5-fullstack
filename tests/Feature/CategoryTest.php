@@ -9,6 +9,7 @@ use Tests\TestCase;
 
 class CategoryTest extends TestCase
 {
+    // migrate database
     use RefreshDatabase;
 
     public function setUp(): void
@@ -18,6 +19,7 @@ class CategoryTest extends TestCase
         // seed the database
         $this->artisan('db:seed');
 
+        // login
         $this->post('/login', [
             'email' => 'test@example.com',
             'password' => 'password',

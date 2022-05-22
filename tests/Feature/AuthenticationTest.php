@@ -10,6 +10,7 @@ use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
 {
+    // migrate database
     use RefreshDatabase;
 
     public function test_registration_screen_can_be_rendered()
